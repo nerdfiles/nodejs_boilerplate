@@ -4,7 +4,33 @@ var sys = require("sys"),
     path = require("path"),
     fs = require("fs"),
     events = require("events"),
-    port = '8125'
+    
+    port = '8125',
+    
+    client = http.createClient(80, "api.*.com"),
+    emitter = new events.EventEmitter();
+
+function ajax() {
+	var client_url = '',
+	    host = '',
+	    request = client.request("GET", client_url, {"host": host});
+
+	request.addListener("response", function(response) {
+		var body = "";
+		response.addListener("data", function(data) {
+			body += data;
+		});
+
+		response.addListener("end", function() {
+			var json = JSON.parse(body);
+			if(json.length > 0) {
+				emitter.emit("items", items);
+			}
+		});
+	});
+
+	request.close();
+}
 
 function load_file(uri, response) {
 
