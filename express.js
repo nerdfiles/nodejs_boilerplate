@@ -82,7 +82,7 @@ Sys.puts( 'Server running at http://localhost:' + config["frontend_port"] + '/' 
 
 DbServer.open(function(err, pClient) {
   DbServer.collection('test_insert', insertData);
-  DbServer.collection('test', removeData);
+  DbServer.collection('test_insert', removeData);
 });
 
 
