@@ -1,6 +1,176 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* -------------------------------------------------- 
+   Compass Imports
+----------------------------------------------------- */
 
-@import "compass/reset";
+/* @import "compass/reset"; */
+@import "compass/css3/box-shadow";
+@import "compass/typography";
+
+
+/* -------------------------------------------------- 
+   Configurables
+----------------------------------------------------- */
+
+/* "compass/typography/vertical_rhythm" */
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+
+/* -------------------------------------------------- 
+   Mixins
+----------------------------------------------------- */
+
+@mixin clearfix {
+  zoom: 1; 
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+  }
+  
+  &:after {
+    clear: both;
+  } }
+  
+@mixin clearfix_check {
+  outline: 1px red solid;
+  @include clearfix; }
+
+.clearfix { 
+  @include clearfix; }
+  
+.clearfix_check { 
+  @include clearfix_check; }
+  
+@mixin gradient-1 {
+
+  background: #f6f8f9; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjhmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2U1ZWJlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2Q3ZGVlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWY3ZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f8f9), color-stop(50%,#e5ebee), color-stop(51%,#d7dee3), color-stop(100%,#f5f7f9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* IE10+ */
+  background: linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-8 */
+
+}
+
+
+/* -------------------------------------------------- 
+   Structure
+----------------------------------------------------- */
+
+.container { 
+  
+  .site-header { }
+  
+  .site-main { 
+  
+    .header { } 
+    
+    .content { } 
+    
+    .footer { } } 
+  
+  .site-footer { } }
+
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+@include establish-baseline;
+
+html { height: 100%; }
+
+body { 
+  @include gradient-1; }
+
+.container {
+  
+  padding-bottom: 50px;
+  
+  .site-header { 
+    @include box-shadow(0 0 1em rgba(0,0,25,.15));
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #e0eff9; 
+    h1 { 
+      margin: 0; 
+      line-height: 1; } }
+  .site-main { 
+    @include box-shadow(0 0 1em rgba(0,0,25,.15));
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #fff; }
+  .site-footer { 
+    @include box-shadow(0 0 1em rgba(0,0,25,.15));
+    margin-top: 30px;
+    padding: 20px;
+    background: #e0eff9; 
+    p { margin: 0; } }
+  
+  .header { 
+    border-bottom: 1px #ccc solid; 
+    padding: 5px 0;
+    margin: 0 0 35px;
+    h1 {
+      background: rgba(200,200,200,.1);
+      border-top: 1px #a34 solid;
+      padding: 5px 0 10px;
+      border-bottom: 1px #e99 solid; } 
+    .byline { 
+      padding: 20px; 
+      text-align: right;
+      border-bottom: 1px #e99 solid;
+      background: #f0f0f0; }
+    .datetime { 
+      padding: 20px 0;
+      font-family: 'Monofett';
+      letter-spacing: .3em;
+      text-align: center;
+      font-size: 2em; } }
+      
+  .content { 
+    p { line-height: 2em; } }
+  
+  .footer {
+    border-top: 1px #ccc solid;
+    padding: 10px 0 0; 
+    margin: 30px 0 0;
+    letter: {
+      spacing: 2px; }
+    text: {
+      transform: lowercase; }
+    font: {
+      variant: small-caps;
+      size: .75em; } } }
+
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+

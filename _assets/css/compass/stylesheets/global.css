@@ -1,68 +1,185 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+/* -------------------------------------------------- 
+   Compass Imports
+----------------------------------------------------- */
+/* @import "compass/reset"; */
+/* -------------------------------------------------- 
+   Configurables
+----------------------------------------------------- */
+/* "compass/typography/vertical_rhythm" */
+/* -------------------------------------------------- 
+   Mixins
+----------------------------------------------------- */
+/* line 40, ../sass/global.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 27, ../sass/global.scss */
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+}
+/* line 32, ../sass/global.scss */
+.clearfix:after {
+  clear: both;
 }
 
-/* line 20, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 43, ../sass/global.scss */
+.clearfix_check {
+  outline: 1px red solid;
+  zoom: 1;
+}
+/* line 27, ../sass/global.scss */
+.clearfix_check:after, .clearfix_check:before {
+  content: "";
+  display: table;
+}
+/* line 32, ../sass/global.scss */
+.clearfix_check:after {
+  clear: both;
+}
+
+/* -------------------------------------------------- 
+   Structure
+----------------------------------------------------- */
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+/* line 51, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 body {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* line 55, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html > body {
+  font-size: 16px;
+}
+
+/* line 96, ../sass/global.scss */
+html {
+  height: 100%;
+}
+
+/* line 98, ../sass/global.scss */
+body {
+  background: #f6f8f9;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjhmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2U1ZWJlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2Q3ZGVlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWY3ZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f8f9), color-stop(50%, #e5ebee), color-stop(51%, #d7dee3), color-stop(100%, #f5f7f9));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 );
+  /* IE6-8 */
+}
+
+/* line 101, ../sass/global.scss */
+.container {
+  padding-bottom: 50px;
+}
+/* line 105, ../sass/global.scss */
+.container .site-header {
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  -o-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #e0eff9;
+}
+/* line 111, ../sass/global.scss */
+.container .site-header h1 {
+  margin: 0;
   line-height: 1;
 }
-
-/* line 22, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
+/* line 114, ../sass/global.scss */
+.container .site-main {
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  -o-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #fff;
+}
+/* line 120, ../sass/global.scss */
+.container .site-footer {
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  -o-box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  box-shadow: 0 0 1em rgba(0, 0, 25, 0.15);
+  margin-top: 30px;
+  padding: 20px;
+  background: #e0eff9;
+}
+/* line 125, ../sass/global.scss */
+.container .site-footer p {
+  margin: 0;
+}
+/* line 127, ../sass/global.scss */
+.container .header {
+  border-bottom: 1px #ccc solid;
+  padding: 5px 0;
+  margin: 0 0 35px;
+}
+/* line 131, ../sass/global.scss */
+.container .header h1 {
+  background: rgba(200, 200, 200, 0.1);
+  border-top: 1px #a34 solid;
+  padding: 5px 0 10px;
+  border-bottom: 1px #e99 solid;
+}
+/* line 136, ../sass/global.scss */
+.container .header .byline {
+  padding: 20px;
+  text-align: right;
+  border-bottom: 1px #e99 solid;
+  background: #f0f0f0;
+}
+/* line 141, ../sass/global.scss */
+.container .header .datetime {
+  padding: 20px 0;
+  font-family: 'Monofett';
+  letter-spacing: .3em;
+  text-align: center;
+  font-size: 2em;
+}
+/* line 149, ../sass/global.scss */
+.container .content p {
+  line-height: 2em;
+}
+/* line 151, ../sass/global.scss */
+.container .footer {
+  border-top: 1px #ccc solid;
+  padding: 10px 0 0;
+  margin: 30px 0 0;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: .75em;
 }
 
-/* line 24, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 26, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 28, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 101, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 30, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 114, ../../../../../../../../usr/local/Cellar/ruby/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */

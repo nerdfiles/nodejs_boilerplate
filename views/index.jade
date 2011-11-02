@@ -2,20 +2,47 @@
 html(lang="en")
 
   head
+  
     title Hello, World!
+
+    block css-framework
+      link(rel='stylesheet', href='/css-lib/foundation/stylesheets/foundation.css')
+      
+      //if lt IE 9
+        link(rel='stylesheet', href='/css-lib/foundation/stylesheets/ie.css')
+
+    block fonts
+      link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Monofett')
+
     block styles
-      style(href='/css/compass/stylesheets/global.css')
+      link(rel='stylesheet', media='all', href='/css/compass/stylesheets/global.css')
+
     block scripts
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
       script(src='/js/plugins.js')
       script(src='/js/global.js')
-      
+
   body.node
+  
     div.container
-      article.content-main
-        header.header
-          h1 Jade templating
-        section.content
-          p Hello, World!
-        footer.footer
-          p Copyright &copy; 2011. Rights?
+    
+      header.site-header.row
+        h1 Jade templating
+        
+      article.site-main.row
+      
+        hgroup.header.row
+          h1 Calling the World
+          div.byline Authored by Someone Special
+          div.datetime Last week, Around 4
+          
+        section.content.row
+          p Sed egestas magna adipiscing eros porttitor purus pulvinar risus cursus amet proin, duis etiam sed, non, sed, diam, magna lacus dis! Lundium ac nec! Duis et augue, natoque! Odio pulvinar, sagittis dis! Ac turpis integer ac, pulvinar ac phasellus, magna. Nisi porttitor mus dapibus etiam? Proin ac nec! Proin! Sit phasellus vel. Enim elementum odio dapibus elementum, magna enim, ut amet ac pulvinar. Ac, penatibus platea, elementum adipiscing? Nisi facilisis, arcu sagittis! Lorem adipiscing nascetur, magna habitasse natoque, nisi auctor! Porttitor turpis proin arcu, tortor diam aenean natoque ac lacus, sed a dolor penatibus eros et eu penatibus sit augue! Ridiculus et, ridiculus porttitor proin! Cum penatibus dis! Tincidunt! Eu hac odio tincidunt augue porta duis diam dapibus in dignissim.
+          p Turpis ultricies vel risus porta adipiscing non, vel vel, tristique aliquet, habitasse ac lundium! Aenean, enim massa sit tincidunt lacus turpis! Lundium aenean. Massa, magna natoque porta scelerisque adipiscing nec urna adipiscing urna, pulvinar, adipiscing! Ac aenean adipiscing vel enim porta proin arcu sed? Nec, vel tincidunt nunc ultrices, auctor, est etiam in dis augue, odio platea, nisi et lundium habitasse! Eros, porta, dapibus duis risus aenean tincidunt vel enim urna enim elementum sociis, dictumst egestas adipiscing, in elit? Odio tempor sagittis sagittis penatibus penatibus lorem non facilisis integer odio nunc dictumst arcu nunc! Elementum, nunc amet odio scelerisque. Duis, mauris scelerisque sagittis magnis, penatibus aliquet nunc, nascetur facilisis, rhoncus, in lundium sit! Elit egestas lorem, natoque vut turpis.
+          
+        footer.footer.row
+          p This article was authored by Satan!
+          
+      footer.site-footer.row
+        p Copyright &copy; 2011. Rights?
+
