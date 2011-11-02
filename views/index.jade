@@ -1,0 +1,21 @@
+!!! 5
+html(lang="en")
+
+  head
+    title Hello, World!
+    block styles
+      style(href='/css/compass/stylesheets/global.css')
+    block scripts
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
+      script(src='/js/plugins.js')
+      script(src='/js/global.js')
+      
+  body.node
+    div.container
+      article.content-main
+        header.header
+          h1 Jade templating
+        section.content
+          p Hello, World!
+        footer.footer
+          p Copyright &copy; 2011. Rights?

@@ -1,0 +1,6 @@
+node        brew install node
+express     npm install express | git://github.com/visionmedia/express.git
+mongodb     brew install mongodb
+            npm install mongodb
+jade        npm install jade
+uglify-js   npm install uglify-js
