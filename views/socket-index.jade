@@ -1,0 +1,9 @@
+script(src='/socket.io/socket.io.js')
+script(type='text/javascript')
+	var socket = io.connect('http://localhost:3000');
+
+	socket.on('connect', function (data) {
+		//console.log(data);
+		var data = 'test';
+		socket.emit('some event', { my: data });
+	});

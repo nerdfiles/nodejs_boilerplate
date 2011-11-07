@@ -19,6 +19,7 @@ html(lang="en")
 
     block scripts
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
+      script(src='/socket.io/socket.io.js')
       script(src='/js/plugins.js')
       script(src='/js/global.js')
 
@@ -35,6 +36,13 @@ html(lang="en")
           h1 Calling the World
           div.byline Authored by Someone Special
           div.datetime Last week, Around 4
+
+        section.form.row
+          form(id='wat', name='wat', action='socketio-test', method='get')
+            legend Say hello!
+              input(id='hello', name='hello', tabindex='1', class='text', placeholder='Say hello?', type='text')
+            legend Say it!
+              button(type='submit', name='base-submit', class='submit btn btn-submit btn-no-icon btn-standard') Hello!
           
         section.content.row
           p Sed egestas magna adipiscing eros porttitor purus pulvinar risus cursus amet proin, duis etiam sed, non, sed, diam, magna lacus dis! Lundium ac nec! Duis et augue, natoque! Odio pulvinar, sagittis dis! Ac turpis integer ac, pulvinar ac phasellus, magna. Nisi porttitor mus dapibus etiam? Proin ac nec! Proin! Sit phasellus vel. Enim elementum odio dapibus elementum, magna enim, ut amet ac pulvinar. Ac, penatibus platea, elementum adipiscing? Nisi facilisis, arcu sagittis! Lorem adipiscing nascetur, magna habitasse natoque, nisi auctor! Porttitor turpis proin arcu, tortor diam aenean natoque ac lacus, sed a dolor penatibus eros et eu penatibus sit augue! Ridiculus et, ridiculus porttitor proin! Cum penatibus dis! Tincidunt! Eu hac odio tincidunt augue porta duis diam dapibus in dignissim.
